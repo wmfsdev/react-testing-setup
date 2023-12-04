@@ -1,17 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function App() {
-  return (
-    <div>
-      <ul className="animals">
-        <li>Cat</li>
-        <li>Whale</li>
-        <li>Lion</li>
-        <li>elephant</li>
-        <li>Rhino</li>
-      </ul>
-    </div>
-  );
-}
+
+const App = (props) => {
+  return <div>{props.name}</div>;
+};
+
+App.propTypes = {
+  name: PropTypes.string,
+};
+
+App.defaultProps = {
+  name: 'Zach',
+};
 
 export default App;
+
+// export const CustomButton = ({ onClick }) => {
+//   return (
+//     <button onClick={onClick}>Click me</button> 
+//   );
+// };
